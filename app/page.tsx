@@ -181,6 +181,19 @@ export default function Home() {
             >
               Default Message
             </button>
+            <button
+              className="bg-pink-400 px-4 py-2 rounded-full hover:opacity-90 cursor-pointer duration-300 w-full text-black border"
+              onClick={() => {
+                toast({
+                  message: "This has a close button!",
+                  duration: 3000,
+                  closeButton:true,
+                  icon:"😮"
+                });
+              }}
+            >
+              With close button
+            </button>
           </div>
         </div>
       </div>
@@ -230,6 +243,9 @@ export default function Home() {
               <div className="bg-amber-100 p-2 px-5 rounded-md">
                 icon(you can add custom icon): type - string(emoji) |
                 ReactNode(eg:lucide-react icon), compulsory - false
+              </div>
+              <div className="bg-amber-100 p-2 px-5 rounded-md">
+                closeButton(clicking on it immediately closes the toast): type - boolean, compulsory - false, values: true, false
               </div>
             </div>
           </div>
