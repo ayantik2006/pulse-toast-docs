@@ -187,12 +187,26 @@ export default function Home() {
                 toast({
                   message: "This has a close button!",
                   duration: 3000,
-                  closeButton:true,
-                  icon:"😮"
+                  closeButton: true,
+                  icon: "😮",
                 });
               }}
             >
               With close button
+            </button>
+            <button
+              className="bg-neutral-800 px-4 py-2 rounded-full hover:opacity-90 cursor-pointer duration-300 w-full text-white border"
+              onClick={() => {
+                toast({
+                  message: "This has a dark theme!",
+                  duration: 3000,
+                  closeButton: true,
+                  icon: "😮",
+                  theme: "dark",
+                });
+              }}
+            >
+              With dark button
             </button>
           </div>
         </div>
@@ -245,13 +259,29 @@ export default function Home() {
                 ReactNode(eg:lucide-react icon), compulsory - false
               </div>
               <div className="bg-amber-100 p-2 px-5 rounded-md">
-                closeButton(clicking on it immediately closes the toast): type - boolean, compulsory - false, values: true, false
+                closeButton(clicking on it immediately closes the toast): type -
+                boolean, compulsory - false, values: true, false
+              </div>
+              <div className="bg-amber-100 p-2 px-5 rounded-md">
+                theme: type:string, compulsory - false, values: dark, default
               </div>
             </div>
           </div>
           <div className="w-full flex gap-4 items-center justify-center text-amber-950 mt-10">
-            <Link href={"https://www.linkedin.com/in/ayantiksarkar"} className="underline" target="_blank">LinkedIn</Link>
-            <Link href={"https://github.com/ayantik2006/pulse-toast"} className="underline" target="_blank">GitHub</Link>
+            <Link
+              href={"https://www.linkedin.com/in/ayantiksarkar"}
+              className="underline"
+              target="_blank"
+            >
+              LinkedIn
+            </Link>
+            <Link
+              href={"https://github.com/ayantik2006/pulse-toast"}
+              className="underline"
+              target="_blank"
+            >
+              GitHub
+            </Link>
           </div>
           <div className="w-full flex gap-4 items-center justify-center text-amber-950">
             &copy; 2026 pulse-toast · Built by Ayantik Sarkar
